@@ -1,4 +1,4 @@
-minetest.register_node("mywhiteblock:block", {
+core.register_node("mywhiteblock:block", {
 	description = "White Block",
 	tiles = {"mywhiteblock_white.png"},
 	is_ground_content = false,
@@ -34,7 +34,7 @@ for _, entry in ipairs(mywhiteblock.colors) do
 	local desc = entry[2]
 	local paint = "^[colorize:"..entry[3]
 
-minetest.register_node("mywhiteblock:block_" .. color, {
+core.register_node("mywhiteblock:block_" .. color, {
 	description = desc .. " Block",
 	tiles = {"mywhiteblock_white.png".. paint},
 	is_ground_content = false,
@@ -44,7 +44,7 @@ minetest.register_node("mywhiteblock:block_" .. color, {
 
 
 end
-if minetest.get_modpath("mypaint") then
+if core.get_modpath("mypaint") then
 local colors = {}
 for _, entry in ipairs(mywhiteblock.colors) do
 	table.insert(colors, entry[1])
@@ -52,7 +52,7 @@ end
 	mypaint.register(paintables, colors)
 end
 
-minetest.register_craft({
+core.register_craft({
 	type = "shapeless",
 	output = "mywhiteblock:block 1",
 	recipe = {"default:dirt","dye:white"},
