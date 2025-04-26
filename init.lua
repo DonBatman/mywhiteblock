@@ -1,3 +1,8 @@
+
+dofile(minetest.get_modpath("mywhiteblock").."/fence.lua")
+dofile(minetest.get_modpath("mywhiteblock").."/stairs.lua")
+dofile(minetest.get_modpath("mywhiteblock").."/walls.lua")
+
 core.register_node("mywhiteblock:block", {
 	description = "White Block",
 	tiles = {"mywhiteblock_white.png"},
