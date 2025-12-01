@@ -70,7 +70,7 @@ core.register_craft ({
 				}
 })
 end
-if minetest.get_modpath("mypaint") then
+if core.get_modpath("mypaint") then
 local colors = {}
 for _, entry in ipairs(blocks) do
 	table.insert(colors, entry[1])

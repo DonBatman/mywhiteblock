@@ -79,7 +79,7 @@ stairs.register_stair_and_slab("mywhiteblock:block", "mywhiteblock:block", {crac
 		"White Stairs", "White Slab", default.node_sound_wood_defaults(), "mywhiteblock_white.png",
 		"White Inner Stairs", "White Outer Stairs")
 
-if minetest.get_modpath("mypaint") then
+if core.get_modpath("mypaint") then
 local colors = {}
 for _, entry in ipairs(block_table) do
 	table.insert(colors, entry[1])

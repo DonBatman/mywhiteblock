@@ -4,13 +4,13 @@ local stairs = core.settings:get_bool("mywhiteblock.stairs", true)
 local fences = core.settings:get_bool("mywhiteblock.fences", true)
 local walls = core.settings:get_bool("mywhiteblock.walls", true)
 if fences then
-dofile(minetest.get_modpath("mywhiteblock").."/fence.lua")
+dofile(core.get_modpath("mywhiteblock").."/fence.lua")
 end
 if stairs then
-dofile(minetest.get_modpath("mywhiteblock").."/stairs.lua")
+dofile(core.get_modpath("mywhiteblock").."/stairs.lua")
 end
 if walls then
-dofile(minetest.get_modpath("mywhiteblock").."/walls.lua")
+dofile(core.get_modpath("mywhiteblock").."/walls.lua")
 end
 
 
